@@ -1,0 +1,167 @@
+<!Doctype html>
+<html>
+<head>
+<title>Output Details:</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link href='https://fonts.googleapis.com/css?family=Croissant One' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Chakra Petch' rel='stylesheet'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+   body{
+	background-image:url("/static/computer.jpg");
+	 /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+   background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  /* text alignment in center*/
+  text-align:center;
+  text-decoration: none;
+	font-family: 'Croissant One';
+	font-size: 22px;
+}
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    .row.content {height: 1550px}
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+  </style>
+</head>
+<body>
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="#">Link</a></p>
+    </div>
+    <div class="col-sm-8 text-left"> 
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<h4>Pie Chart:</h4>
+<div id="piechart"></div>
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var kk= {{ k_k|safe }}
+  var vv= {{ v_v|safe }}
+  var ll=[['mx_field','option']]
+  var i;
+  for (i = 0; i < kk.length; i++) {
+    ll.push([kk[i],vv[i]]);  
+  }
+  
+  var data = google.visualization.arrayToDataTable(ll);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'Time for you spend in your life', 'width':450, 'height':400};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+</script>
+
+<p>{{"We were predicting from your maximum time spending fields:"}}</p>
+{% if info[0]=='Bold' %}
+<ul>
+<li>{{"You have ability for be team leader"}}</li>
+</ul>
+{% endif %}
+
+{% if s_s=='Education' %}
+<ul>
+<li>{{"From your experience your learning skill level is high"}}</li>
+<li>{{"You can learn new technologies and become scientist"}}</li>
+</ul>
+{% endif %}
+
+{% if s_s=='Games' %}
+<ul>
+<li>{{"You are good player in below games:"}}</li>
+<ol>
+{% for i in sp_or %}
+		<li>{{i}}</li>
+	{% endfor %}
+</ol>
+<li>{{"You can archive some levels in these games."}}</li>
+</ul>
+{% endif %}
+
+{% if s_s=='ExtraCurricularActivities' %}
+<ull>
+<li>{{"You have skills in below fields:"}}</li>
+<ol>
+{% for i in ex_t %}
+		<li>{{i}}</li>
+	{% endfor %}
+</ol>
+<li>{{"You can archive some levels in these fields."}}</li>
+</ul>
+{% endif %}
+
+<p>Course Details:</p>
+<p>Courses For CHOICE_1</p>
+{% set Nop_1=[] %}
+{% for i in det1 %}
+<p>{{i}}</p>
+{% do Nop_1.append(1) %}
+{% endfor %}
+{% if Nop_1==[] %}
+<p>{{"We can't preict your related course"}}</p>
+{% endif %}
+<br>
+{% if subj[1] %}
+	<p>Courses For CHOICE_2</p>
+	{% set Nop_2=[] %}
+	{% for i in det2 %}
+		<p>{{i}}</p>
+		{% do Nop_2.append(1) %}
+	{% endfor %}
+	{% if Nop_2==[] %}
+	<p>{{"No course avilabe"}}</p>
+	{% endif %}
+{% endif %}
+</div>
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+</body>
+</html>

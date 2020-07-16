@@ -1,0 +1,212 @@
+<html>
+<head>
+<title>College</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link href='https://fonts.googleapis.com/css?family=Croissant One' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Chakra Petch' rel='stylesheet'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+body{
+	background-image:url("/static/bird.jpg");
+	 /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+   background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  /* text alignment in center*/
+  text-align:center;
+  text-decoration: none;
+	font-family: 'Croissant One';
+	font-size: 22px;
+	color:'blue';
+}
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    .row.content {height: 1200px}
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+  </style>
+ </head>
+<body>
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="#">Link</a></p>
+    </div>
+    <div class="col-sm-8 text-left"> 
+<p>Description</p>
+<p>Hello friends you can select your college according to:</p>
+<ol>
+<li>District</li>
+<li>Branch (or) Department</li>
+<li>Both</li>
+</ol>
+<form method="POST" action="/find_col" >
+<table>
+<tr><td>Find Your College</td></tr>
+<tr>
+<td>Choose District:</td>
+</tr>
+<tr>
+<td><select name="district">
+		<option value="None" selected>None</option>
+		<option value="Ariyalur" >Ariyalur</option>
+		<option value="Chennai">Chennai</option>
+		<option value="Coimbatore">Coimbatore</option>
+		<option value="Cuddalore">Cuddalore</option>
+		<option value="Dharmapuri">Dharmapuri</option>
+		<option value="Dindigul">Dindigul</option>
+		<option value="Erode">Erode</option>
+		<option value="Kancheepuram">Kancheepuram</option>
+		<option value="Kanyakumari">Kanyakumari</option>
+		<option value="Karur">Karur</option>
+		<option value="Krishnagiri">Krishnagiri</option>
+		<option value="Madurai">Madurai</option>
+		<option value="Nagapattinam">Nagapattinam</option>
+		<option value="Namakkal">Namakkal</option>
+		<option value="Nilgiris">Nilgiris</option>
+		<option value="Perambalur">Perambalur</option>
+		<option value="Pudukottai">Pudukottai</option>
+		<option value="Ramanathapuram">Ramanathapuram</option>
+		<option value="Salem">Salem</option>
+		<option value="Sivagangai">Sivagangai</option>
+		<option value="Thanjavur">Thanjavur</option>
+		<option value="Theni">Theni</option>
+		<option value="Thrichy">Trichirappalli</option>
+		<option value="Thirunelveli">Thirunelveli</option>
+		<option value="Thiruppur">Tiruppur</option>
+		<option value="Thiruvallur">Thiruvallur</option>
+		<option value="Thiruvanamalai">Thiruvannamalai</option>
+		<option value="Thiruvarur">Thiruvarur</option>
+		<option value="Thoothukudi">Thoothukudi</option>
+		<option value="Vellore">Vellore</option>
+		<option value="Viluppuram">Viluppuram</option>
+		<option value="Virudhunagar">Virudhunagar </option>
+</select></td></tr>
+<tr><td>Choose Course:</td></tr>
+<tr><td>
+<select name='course'>
+<option value="None" selected>None</option>
+
+<option value='Aeronautical Engineering'>Aeronautical Engineering</option>
+<option value='Automobile Engineering'>Automobile Engineering</option>
+<option value='B.A. Arabic'>B.A. Arabic</option>
+<option value='B.A. Co-Operation'>B.A. Co-Operation</option>
+<option value='B.A. Corporate Secretaryship'>B.A. Corporate Secretaryship</option>
+<option value='B.A. English'>B.A. English</option>
+<option value='B.A. Economics'>B.A. Economics</option>
+<option value='B.A. Geography'>B.A. Geography</option>
+<option value='B.A. History'>B.A. History</option>
+<option value='B.A. Indian Culture'>B.A. Indian Culture</option>
+<option value='B.A. Music'>B.A. Music</option>
+<option value='B.A. Political Science'>B.A. Political Science</option>
+<option value='B.A. Social Work'>B.A. Social Work</option>
+<option value='B.A. Sociology'>B.A. Sociology</option>
+<option value='B.A. Tamil'>B.A. Tamil</option>
+<option value='B.A. Tourism and Travel Management'>B.A. Tourism and Travel Management</option>
+<option value='B.Arch( Architecture)'>B.Arch( Architecture)</option>
+<option value='B.B.A. Business Administration'>B.B.A. Business Administration</option>
+<option value='B.B.M. Business Management'>B.B.M. Business Management</option>
+<option value='B.C.A. Computer Application'>B.C.A. Computer Application</option>
+<option value='B.Com. Computer Application'>B.Com. Computer Application</option>
+<option value='B.C.S. Corporate Secretaryship'>B.C.S. Corporate Secretaryship</option>
+<option value='B.Com. Corporate Secretaryship'>B.Com. Corporate Secretaryship</option>
+<option value='B.Com. Commerce'>B.Com. Commerce</option>
+<option value='B.Com. E-Commerce'>B.Com. E-Commerce</option>
+<option value='B.Com.(Regular)'>B.Com.(Regular)</option>
+<option value='B.Lit. Tamil'>B.Lit. Tamil</option>
+<option value='B.Sc. Bio-Chemistry'>B.Sc. Bio-Chemistry</option>
+<option value='B.Sc. Bio-Informatics'>B.Sc. Bio-Informatics</option>
+<option value='B.Sc. Bio-Technology'>B.Sc. Bio-Technology</option>
+<option value='B.Sc. Botany'>B.Sc. Botany</option>
+<option value='B.Sc. Chemistry'>B.Sc. Chemistry</option>
+<option value='B.Sc. Computer Science'>B.Sc. Computer Science</option>
+<option value='B.Sc. Electronics'>B.Sc. Electronics</option>
+<option value='B.Sc. Fashion Technology'>B.Sc. Fashion Technology</option>
+<option value='B.Sc. Geography'>B.Sc. Geography</option>
+<option value='B.Sc. Geology'>B.Sc. Geology</option>
+<option value='B.Sc. Hotel Management and Catering Technology'>B.Sc. Hotel Management and Catering Technology</option>
+<option value='B.Sc. Home Science'>B.Sc. Home Science</option>
+<option value='B.Sc. Hospital Management'>B.Sc. Hospital Management</option>
+<option value='B.Sc. Information Technology'>B.Sc. Information Technology</option>
+<option value='B.Sc. Industrial Electronics'>B.Sc. Industrial Electronics</option>
+<option value='B.Sc. Mathematics'>B.Sc. Mathematics</option>
+<option value='B.Sc. Microbiology'>B.Sc. Microbiology</option>
+<option value='B.Sc. Nutrition and Dietetics'>B.Sc. Nutrition and Dietetics</option>
+<option value='B.Sc. Physics'>B.Sc. Physics</option>
+<option value='B.Sc. Physical Education'>B.Sc. Physical Education</option>
+<option value='B.Sc. Software Engineering'>B.Sc. Software Engineering</option>
+<option value='B.Sc. Statistics'>B.Sc. Statistics</option>
+<option value='B.Sc. Textile and Fashion Designing'>B.Sc. Textile and Fashion Designing</option>
+<option value='B.Sc. Visual Communication'>B.Sc. Visual Communication</option>
+<option value='B.Sc. Zoology'>B.Sc. Zoology</option>
+<option value='B.S.W. Social Work'>B.S.W. Social Work</option>
+<option value='Bio Medical Engineering'>Bio Medical Engineering</option>
+<option value='Chemical Engineering'>Chemical Engineering</option>
+<option value='Civil Engineering'>Civil Engineering</option>
+<option value='Computer Science and Engineering'>Computer Science and Engineering</option>
+<option value='Electronics and Communications Engineering'>Electronics and Communications Engineering</option>
+<option value='Electrical and Electronics Engineering'>Electrical and Electronics Engineering</option>
+<option value='Electronics and Instrumentation Engineering'>Electronics and Instrumentation Engineering</option>
+<option value='Information Technology'>Information Technology</option>
+<option value='Instrumentation and Control Engineering'>Instrumentation and Control Engineering</option>
+<option value='M.B.B.S. Medicine and Surgery'>M.B.B.S. Medicine and Surgery</option>
+<option value='Marine Engineering'>Marine Engineering</option>
+<option value='Mechanical Engineering'>Mechanical Engineering</option>
+<option value='Mechatronics Engineering'>Mechatronics Engineering</option>
+<option value='Metallurgical Engineering'>Metallurgical Engineering</option>
+<option value='Pharmaceutical Technology'>Pharmaceutical Technology</option>
+<option value='Petro Chemical Technology'>Petro Chemical Technology</option>
+<option value='Petroleum Engineering'>Petroleum Engineering</option>
+<option value='Production Engineering'>Production Engineering</option>
+<option value='Textile Technology'>Textile Technology</option>
+
+</select>
+</td></tr>
+<br>
+<tr><td><p style="text-align:center;"><input type='submit' value='Find' class="button"/></p></td></tr>
+</table>
+</form>
+</div>
+<div class="col-sm-2 sidenav">
+      <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
+</body>
+</html>

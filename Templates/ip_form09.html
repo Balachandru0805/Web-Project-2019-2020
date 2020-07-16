@@ -1,0 +1,169 @@
+<!Doctype html>
+<html>
+<head>
+<title>My Project</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link href='https://fonts.googleapis.com/css?family=Croissant One' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Chakra Petch' rel='stylesheet'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style>
+body{
+	background-color:#EA4335;
+	 /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+
+  /* text alignment in center*/
+  text-align:center;
+  text-decoration: none;
+	font-size:22px;
+	font-family:'Croissant One';
+}
+   .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    .row.content {height: 1550px}
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+
+</style>
+</head>
+<body>
+<div class="container-fluid text-center">    
+  <div class="row content">
+<div class="col-sm-2 sidenav">
+      <p><a href="#">Link</a></p>
+    </div>
+    <div class="col-sm-8 text-left">
+<h2> <p>In your 9<sup>th</sup>School life your interest:</p></h2>
+<form method="POST" action="/proj">
+1.Attitude:<br><pre><font face='Chakra Petch' size="4">Attitude is character of people in the world..So, choose what type of person you are ????</font><br></pre>
+<select name="Attitude_9">
+		<option value="Bold" >Bold</option>
+		<option value="Normal" selected>Normal</option>
+		<option value="Shie">Shie</option></select><hr>
+<!--Take a list of courses from this link "https://www.careers360.com/all-courses?page=1"-->
+2.Education:<br><pre><font face='Chakra Petch' size="4">Education is the developing tool of knowledge!! Choose which field you are intrested ????</font><br></pre>
+<select name="Education_9">
+		<option value="English">English</option>
+		<option value="Maths">Maths</option>
+		<option value="Tamil" >Tamil</option>
+		<option value="Science">Science</option>
+		<option value="SocialScience">Social Science</option>
+</select><hr>
+<!--Take a list of games from this link "https://olympic.ind.in/sports"-->
+3.Games:<br><pre><font face='Chakra Petch' size="4">Games are entertainment tool!!! Choose which game do you like more ????</font><br></pre>
+<select name="Games_9">
+
+		<option value="Archery" selected>Archery</option>
+		<option value="Athletics">Athletics</option>
+		<option value="Aquatics" >Aquatics</option>
+		<option value="Badminton" >Badminton</option>
+		<option value="BallBadminton" >Ball Badminton</option>
+		<option value="Bandy" >Bandy</option>
+		<option value="BaseballSoftball" >Baseball / softball</option>		
+		<option value="Basketball" >Basketball</option>
+		<option value="BilliardsAndSnooker" >Billiards and snooker</option>
+		<option value="Boxing" >Boxing</option>
+		<option value="Chess" >Chess</option>
+		<option value="Cricket" >Cricket</option>
+		<option value="Cycling" >Cycling</option>
+		<option value="EqestrianSports" >Eqestrian sports</option>
+		<option value="Football" >Football</option>
+		<option value="Floorball" >Floorball</option>
+		<option value="GilliDanda" >Gilli-danda</option>
+		<option value="Golf" >Golf</option>
+		<option value="Gymnastics" >Gymnastics</option>
+		<option value="Handball" >Handball</option>
+		<option value="Hockey" >Hockey</option>
+		<option value="IceHockey" >Ice hockey</option>
+		<option value="Jallikattu" >Jallikattu</option>
+		<option value="Kabaddi" >Kabaddi</option>
+		<option value="Kancha" >Kancha</option>
+		<option value="Karate" >Karate</option>
+		<option value="Kayaking" >Kayaking</option>
+		<option value="KhoKho" >Kho-Kho</option>
+		<option value="Kickboxing" >Kickboxing</option>
+		<option value="KiteFlying" >Kite-flying</option>
+		<option value="Korfball" >Korfball</option>
+		<option value="Lacrosse" >Lacrosse</option>
+		<option value="Motorsports" >Motorsports</option>
+		<option value="Netball" >Netball</option>
+		<option value="Polo" >Polo</option>
+		<option value="RockClimbing" >Rock climbing</option>
+		<option value="Rugby" >Rugby</option>
+		<option value="SepakTakraw" >Sepak takraw</option>
+		<option value="SevalSandai" >Seval Sandai</option>
+		<option value="Swimming" >Swimming</option>
+		<option value="TableTennis" >Table Tennis</option>
+		<option value="Taekwondo" >Taekwondo</option>
+		<option value="Tennis" >Tennis</option>
+		<option value="Throwball" >Throwball</option>
+		<option value="Volleyball" >Volleyball</option>
+		<option value="WeightliftingPowerlifting" >Weightlifting / Powerlifting</option>
+		<option value="Wrestling" >Wrestling</option>
+		<option value="Others" >Others</option>
+</select><hr>
+
+
+4.Extra Curricular Activities:<br><pre><font face='Chakra Petch' size="4">Choose which ECA you Like more????</font><br></pre>
+<select name="Eca_9">
+		<option value="Art" selected>Art</option>
+		<option value="Drama">Drama</option>
+		<option value="Dance">Dance</option>
+		<option value="magic">magic</option>
+		<option value="Music" >Music</option>
+		<option value="photography">photography</option>
+		<option value="Ventriloquism" >Ventriloquism</option>
+		<option value="Others">Others</option>
+</select><hr>
+
+5.Maximum Time spending Field:<br><pre><font face='Chakra Petch' size="4">Choose maximum time spend in your field</font><br></pre>
+<select name="Time_9">
+		<option value="Education" >Education</option>
+		<option value="Games" selected>Games</option>
+		<option value="ExtraCurricularActivities">Extra curricular activities</option></select>
+<hr>
+<button type="button"  style="float:left;width:163px;color:blue;height:36px"><a href="pre_ip_08">Previous</a></button>
+
+<p style="text-align:right;"><input type='submit' value='Submit_2' class="btn btn-success" name="option" /></p>
+
+</form>
+</div>
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+</body>
+</html>
